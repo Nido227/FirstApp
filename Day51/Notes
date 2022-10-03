@@ -1,0 +1,53 @@
+Inheritance
+
+What is Inheritance from super class?
+-- All visible fields and methods
+
+Constructors are not inherited, however they can be accessible using super(arg..)
+
+this(args)
+-this is used to call current class' other Constructors
+
+super(args)
+-this is used to call super class' other Constructors
+
+
+Method Overriding:
+--we can override the inherited instance methods from super class 
+in sub class to define sub class version of the method.
+  it has to have same method name, parameter list, and return type --atm,
+
+  public --> public
+  protected --> proteceted, public
+  dafault --> default, protected, public
+  private --> There is no overriding concept for Private bc its not inherited
+
+We have already been overriding the toString() method from object class to avoid getting hashcode
+
+public String toString(){
+    return "your own message";
+}
+
+Overloading
+- 2 method with same name different parameter list 
+//does return type, access modifier matter? No.
+//does it matter if it's static or instance? No.
+it can be in same class or it can be in inherited classes
+
+Overriding
+- Inheritance relationship must exist
+we can override super classes' instance method
+in sub class to provide sub class version of action
+
+Name--> has to be the same
+Parameter List --> has to be the same
+  (method signature has to be the same)
+return type--> same ATM
+
+visibility---> has to be same or more
+
+method overriding is a concept exclusive to instance method
+**CANNOT OVERRIDE STATIC METHOD**
+
+
+

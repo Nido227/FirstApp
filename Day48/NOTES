@@ -1,0 +1,90 @@
+What can we have inside a class
+
+public Person{
+
+    //instance fields can be used to define properties of objects, instance fields belong to object
+    int age;
+    String name;
+
+    //static fields belong to the class
+    //there is only one copy of this calue among all objects
+    created out of this calss
+    static String race = "Human";
+
+    //CONSTRUCTOR 
+       //has same name as class name and no return type
+       //it runs automaticaly when object is being created
+       //mostly used for creating object with innitial state
+           //or setting the value of instance fields
+           //it can be overloaded
+    public Person(){
+        //no arg constructor
+    }
+
+    public Person(Stirng name, int age){
+        // 2 arg constructor
+    }
+
+    //instance method
+      //how can we access instance method?
+      //We need an object to access instance method
+      //personObj.printPersonInfo()
+      //mostly used to read or modify instance field value
+
+    public void printPersonInfo(){
+        //print name and age
+    }
+
+    //there are special purpose instance methods called
+        //getters and setters (IS A METHOD)
+        //are best practice of encapsulating private fields to protecet data
+        public int getAge(){
+            return age;
+        }
+        public void setAge(int age){
+            this.age = age;
+        }
+
+    //static methods
+    //How can we access?
+    static members(fields, method) should be accessed in statc way: 
+    Classname.statifField
+    Classname.staticMethod(args..)
+    when is a good time to use static method
+        if ur method has actions that are not related to the properties of the objects / instance field
+        then its always good to just make it static
+
+
+    public static void showMeTheRace(){
+        //print race
+    }
+        
+    initilizer block: it has no name (static) { }
+        static block
+
+        it will only run once when class is loaded
+        any of its static members being accessed for the first time
+        print Person.race
+        or
+        Person p = new Person();
+
+        static{
+            It will only run once when class is loaded
+        }
+    instance block:
+    
+    {
+        //this will run everytime an object is created
+    }
+    this is almost like having above code in each and every constructor
+
+    this is the piece of code that will run right before you enter constructor of that class
+
+
+
+Inheritance Intro
+    a class can Inheritancethe fields(properties) and (methods) behavior
+    
+
+
+}

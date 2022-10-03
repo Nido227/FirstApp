@@ -1,0 +1,89 @@
+Inheritance:
+
+    Why do we need it?
+    a class can extend another class
+    to inherit fields and methods
+
+    What is inherited?
+    all visible fields and methods
+    constructo is NOT inherited
+
+    We can just use all inherited members just like its our own
+
+    and we have option to add new fields or meethods that does not exists in super class
+
+    We can also change what super class provided
+
+        fields
+          if we declare a field that already exists in super class
+              it will hide super class's field
+
+              IT JUST NEED TO HAVE SAME NAME
+              IT CAN HAVE EVERYTHING ELSE DIFFERENT
+
+              How do we access a hidden field in sub class
+
+            parent
+                int capacity
+
+            child
+                long capacity
+
+            super.capacity --> parent version
+            this.capacity --> child class version
+
+
+    
+        methods
+            static method
+
+                a sub class define same method as super class, it hides super class' static method
+
+            public class Person{
+                public static void showRace{
+                    print("Human");
+                }
+            }
+
+            public class Spartan extends person{
+                public static void showRace{
+                    print ("Spartan");
+                }
+            }
+
+
+            this. super. MUST NOT SHOW UP IN STATIC METHID
+            instance members MUST NOT SHOW UP IN STATIC method
+
+            public class Spartan extends person{
+
+                @Override
+                public void showRace(){
+                    print "Spartan"
+                }
+            }
+
+            Overloading  VS  Overriding
+//------------------------------------------------------
+            final keyword
+
+        public final class Spartan{
+
+        }
+        public class Horse extends Spartan{} ======> ERROR, Cannot extend with "Final" keyword
+
+        //-----------------------------------------
+            public class Student{
+
+            }
+
+            public final class LocalStudent extends Student{ 
+
+            }
+            as long as a class is not final, it can be a super class
+            a final class can be a sub class as well as its super class is not final
+
+            
+
+
+

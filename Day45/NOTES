@@ -1,0 +1,12 @@
+METHOD VS CONSTRUCTOR
+
+
+METHOD --- has return type can have any name and can take certain action and can be called upon request
+
+
+CONSTRUCTOR --- has NO return type has same name as class name
+will be called each time an object is being created only a constructor can call another constructor of same class using this(args...)
+
+
+A constructor can call another method in same class
+A method cannot call constructor in any circumstances using this()

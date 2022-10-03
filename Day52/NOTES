@@ -1,0 +1,34 @@
+OOP: Object oritented programming
+    -- 4 main concepts are: Encapsulation, Inheritance, Abstraction, Polymorphism
+
+Encapsulation: hides the instance variables( usuallly have private access modifiers )
+
+    getter: Read ONLY
+     1. return method (Return-Type cannot be void)
+     2. access modifier Should not be private
+     3. return Type must be same data-type with the instance variable'
+     4. does not have any argument
+
+
+    Setter: Modify
+     1. none return method (void)
+     2. access modifer should not be private
+     3. must have an argument and argument' data-type MUST be same with instance variable
+     4. argument must be initialized to the instance variable
+
+Inheritance: builds relationship between classes (super and sub)
+    0.  class A     extends     class B
+            sub                       sub
+    
+    1. sub class inherits all the inheritable features from the super class
+
+      features (blocks, or methods, or fields) that are not inheritable in super class:
+           1. features with private access modifer
+           2. feature with default access modifer (if sub class and super class not)
+           3. abstract methods (if the sub class is not abstact class)
+    
+    2. super class cannot inherit any features from the sub class
+
+    3. A class can only extend one class. A class can be extended by multiple classes
+
+    4. super class cannot be final

@@ -1,0 +1,30 @@
+-------------------DAY47 NOTES-------------------
+//static initilizer block
+//it will ony run once when the Class is loaded
+//it is used to initialize the static fields value before
+//the types first usage and it'll run only 1 time before its usage
+
+//if you have more than one block 
+//it will run in the order it appears
+
+
+//import is used to import the type thats not under the package
+//static import
+//>>is used to import the visible static member of another class
+//we use the keyword import static yourClassname.staticMember;
+//just like import the class, we can use .* to import all static members
+
+
+Instance block
+    -is a block of code that runs everytime an object is being created
+    right before constructor class
+
+    {
+        your code goes here
+    }
+    How is this useful?
+    -- if you have block of code that shaed among all of your constructor,
+    you can put it in instance block to reduce duplicate
+
+    ANY OCA QUESTION YOU GOT ABOUT INSTANCE BLOCK
+      just copy everything inside instance block and insert in into each and every constructor

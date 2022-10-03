@@ -1,0 +1,70 @@
+Inheritance:
+    IS-A Relationship
+    a sub class can inherit all visible fields and methods from super class
+
+    We use extends keyword to build this relationship
+
+    visibility
+        public -- everywhere
+        protected  -- same package + sub classes outside of the package
+                    YOU MUST HAVE SUB CLASS OBJECT TO ACCESS THESE MEMBERS
+        default -- same package
+        private -- same class
+
+    We don't inherit anything we dont see
+
+    Constructor in inheritance relationship
+        ITS NOT INHERITED
+
+        it can be called in sub class by using super(args..)
+        What's the first statement of any constructor if no constructor call this(arg) super(arg) is already made
+            -----> super() a call to super classes no argument constructor
+
+            super(args) or this(args) can only be called once and can not show up together
+            It has to be the first statement all the time
+
+
+        Method overriding
+            we have option to override the super class method with new implementation to provide sub class version of the method 
+            It's exclusively for INSTANCE METHODS
+                -- we can just override the method to have same implementation
+
+                example: in super class:
+                    public void doSomething(){
+                        print("do something");
+                    }
+
+                    in sub class:
+                    super.doSomething();
+                    print("do something more");
+
+        super. ---> is used to access super class's field and methods
+
+        public class Course{
+            
+            int capacity = 150 ;
+
+            public static void doStatic(){
+                //
+            }
+        }
+
+        public class OnlineCourse extends Course{
+            int capacity = 300;
+            
+            public static void doStatic(){
+                //
+
+
+        }
+
+        Hiding fields :
+            if sub class define a visible field that already exits in super class
+            it hides super class version of the field
+
+            super. can only access directly parents members
+
+
+        Hiding methods:
+            if sub class define a visible static method that already exits in super class
+            it hides super class version of the method

@@ -1,0 +1,186 @@
+Constructor
+    -- a block of code that runs when object is being created
+        -- it has same name as class name
+        -- it has no return tyoe
+
+        -- access modifier ---> ANY Access modifier
+        public class Person{
+            public Person(){}
+            public Person(String name) {}
+        }
+
+    -- Defualt behaviour of compiler
+        if we dont have any constructor
+             -- compiler will provide one
+             --it no arg constructor and it has empty body
+             -- its called default constructor
+        
+        if we have any constructor
+            -- compiler does not provide default constructor
+        
+        public Student{
+            public Student(String name){
+
+            }
+        }
+        inside main somewhere
+        Student s = new Student(); COMPILER ERROR
+
+        // What is Constructor mosty used for:
+            creating object with initial state
+            --initilize all the fields value along with creation
+
+        Instantiating a class
+        Creating instance of class
+        Creating an object
+    ALL OF THEM ARE TALKING ABOUT SAME THING
+
+    Where can we call a constructor:
+      it can only be called inside another constructor of same class using this(args..)
+
+    Constructor chaining
+    -- calling oe constructor in another constructor
+
+    Rules for chaining,
+    1, this(args..) has to be first statement in constructor body.
+    2, can be called only once in one constructor
+    
+    public Student(){
+        this("Spartan");  //CANNOT CALL TWICE IN SAME CONSTRUCTOR
+        sysout...
+    }
+
+    public Student(String name){
+        this();
+    }
+
+    3, Recursive call should be avoided or it will not compiler,
+        you call me, i call you --> recursive
+
+    
+    Purpose of usnig constructor chaining 
+    --DRY PRINCIPLE --> DO NOT REPEAT YOURSELF
+    -- code reusability and maintainibility
+
+
+
+Variables : 
+
+  depending on what is sotred inside container
+  pure value or address of object
+  -- primitiv variable    int i;
+  -- reference variable   String s;
+      
+  depending on where this variable is defined
+  -- insdie method = local variable
+  if its on method declaration = method parameter
+  if its outside any method under the class 
+  = field 
+     --> instance field
+     --> static field / variable
+
+
+static VS instance
+    static belongs to the class
+        we can access static members using static way
+        className.staticFieldName
+        className.methodName(args..)
+    static field
+    there is only one copy of static field value
+    shared among entire objects created out of class
+
+    can we access static members using object
+        YES BUT HIGHLY DISCOURAGED!
+        obj.staticField
+        obj.staticMethod(args)
+        /even eclipse will show warning to remind you to access static members in static way
+
+    instance belongs to the object
+        an object must be created to access instance members
+        obj.staticFieldName
+        obj.methodName(args..)
+
+    THIS IS NOT ALLOWED!
+        ClassName.instanceField
+
+
+Instance members VS static members Access in same class
+    instance field
+        constructor, instance method
+    
+    static field (anywhere)
+        constructor, instance method, static method
+
+    instance method
+        constructor, instance method
+    
+    static method  
+        constructor, instance method, static method 
+        ANYWHERE
+        
+
+
+Static members of the class
+    -static method
+    -static field / variable  |  class variable
+
+static fields are also called class variable because it belongs
+to the class directly compare to instance variables/fields
+belong to the object
+
+Example: 
+House --> instance variable of num and design
+--each object will get their own copy of num and design
+
+--> static variable/field of neighborhoodName 
+  --> each and every house object created will share one copy of
+neighborhoodName value
+
+Static belong to the class
+    in order to access static members
+    its strongly reccomended to use static way
+    className.staticField
+    className.staticMethod(arg..)
+
+    you may still use an object to access those members 
+    obj.staticField
+    since there is only one copy
+      anychange made to the value will reflect on every object
+
+
+Instance belong to the object
+  in order to access instance members
+  WE MUST CREATE AN OBJECT!!!
+  obj.instanceField
+  obj.instanceMethod(arg.)
+
+Static variable/field  | Class variable
+
+    it has single copy ammount all instances
+    every object created of the class will have 1 single value to share
+
+Where can we access it in same class:
+--constructor
+--static method
+--instance method
+
+Bottom line is --> everywhere in same class
+
+
+Where and How can we access static variable outside of class
+
+static way --> className.staticFieldName
+as long as its visible
+
+What kind of access modifier can be used
+    public protected default private
+
+
+Inside instance method--
+we can access any fields - static | instance
+we can access any methods - static | instance
+
+inside static methods--
+ONLY STATIC FIELDS AND METHOD CAN BE ACCESSED
+
+

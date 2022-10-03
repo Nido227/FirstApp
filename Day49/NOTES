@@ -1,0 +1,46 @@
+DAY49
+
+Inheritance
+
+public Computer extends Electronic{
+
+}
+
+What is inherited from super class
+
+All visible fields and methods from super class
+constructor is NOT inherited
+
+
+Access modifier
+private --- same class only
+default --- same package only
+protected --- same package + sub classes outside the package
+public --- everywhere
+
+
+Implicit behavior of compiler
+
+automatic type widening / up casting
+long i = 10;
+
+Wrapper type auto boxing and unboxing
+Integer i = 10;
+i = new Integer(10);
+
+Constructor
+  if you dont have any constructor
+  compiler will add no arg constructor
+
+  public YourClassName(){
+
+  }
+
+  first line of any constructo is always a call to 
+  super class no arg constructor if its not already called
+  using either super(args..) or this(args.)
+
+  public YourClassName(){
+    super();
+  }
+

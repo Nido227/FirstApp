@@ -1,0 +1,6 @@
+//GETTER --> a method for getting the value of your field 
+//and the name is specifically recommended in getFieldName() format and return the value of field
+
+//SETTER --> a method for setting the value of your single field
+//and the name is specifically suggested to have setFieldName(dataType fieldName) 
+//and it will set new value for the field and it does not return value

@@ -1,0 +1,53 @@
+What can we have inside one class
+
+
+
+//Inheritance
+  -  class can extend use fields and methods from another class by extending it, instead of creating everything from scratch
+
+  IS-A Relationship
+    Student IS-A Person
+    LocalStudent IS-A Student
+    Car - Vehicle
+
+    What keyword to build Relationship
+        public class Student extends Person{
+
+        }
+
+        How many class a class can extends directly
+           a class can only extend one another class directlt
+           BAD:
+           public class Student extends Person, Human, Robot{}
+
+        Child--> Parent --> GrandParent --> Object (is an actual class)
+        Child c1 = new Child();
+        c1.everyVisibleFieldsAndMethod....
+
+        Whats inherited from super class
+            All visible fields / methods from super class
+            Constructor IS NOT INHERITED
+
+        Visibility:
+            private: in same class
+            default: in same package
+            protected: same package + sub classes outside package
+            public: everywhere
+
+        Constructor: 
+            how can we call other constructor of same class
+                this(arg..)
+                    has to be the first statement
+                    can only be called once
+                    recursive calls should be avoided ( you call me, i call you --compiler error)
+
+            how can we call super class constructor
+                super(arg..)
+                    has to be the first statement
+                    an only be called once
+                    if no constructor call is made already
+                        super() will be inseted in first line
+                    super() and this() can not show up together in same constructor
+                    CAN NOT CALL A CONSTRUCOT THAT WE DONT HAVE
+            
+        super(args..)

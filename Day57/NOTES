@@ -1,0 +1,50 @@
+
+Defualt behavior of compilers:
+
+    anything under java.lang package is automatically imported 
+    and no need for explicit import statement
+    for example: String class, System, Object
+
+    non-final fields of the class:
+      get default value of 0 for numbers, false for boolean
+     empty char for char, null for reference variable
+
+     int i = 'a' l ---> 97;
+
+    automatic type widening | upcasting
+        long ; = 10 --> 10L;
+
+    autoboxing | auto unboxing
+        Integer i1 = 10 ---? new Integer(10);
+        int i2 = new Integer(12) ---> 12;
+
+    Constructor:
+        if we dont define any constructor
+                ---> compiler will provide defauly no arg constructor
+                (as long as any constructor is defined we dont get one)
+
+        first statement of any constructor is a call to super classes
+        no arg constructor using super()
+            (as long as no other constructor call is made already)
+
+    Inheritance:
+        if a class does not explicitly extends another class 
+        it will implicitly extends opject class
+
+    Interface:
+        all the fields in interface are automatically public static final 
+        (and can not be marked with other access modifier) like private/protected 
+
+        all the method without body are automatically public abstract:
+        everything in interface are implicitly public
+
+
+Extends vs Implements
+
+    a class extends another class (only one directly)
+    
+    an interface extends another interface (one or more interfaces) 
+    
+    a class implements n interface(one or more)
+
+

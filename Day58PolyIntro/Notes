@@ -1,0 +1,82 @@
+DAY58 NOTES:
+
+
+2 Ways to achieve abstraction in Java
+   abstract class
+   interface
+
+
+Interface
+    CONSTANT --> public static final field
+    abstract method --> 
+
+    default method 
+        is declared using default keyword and it has body, 
+        it makes easier to add new functionality into interface without breaking existing functionalities
+
+    static method 
+        its mostly used as utility method thaat not attached any object
+        we can only access static method of interfae using static way*
+        * InterfaceName.staticMethod()
+        IT IS NOT INHERITED
+
+        By default, access modifier for interface members are ALL PUBLIC  
+
+    Any firlds ae automatically public static final
+    Any method without a body -- are automatically public abstract
+
+    
+    How many interface can a class implement?  No Limit.
+    Example:
+    public class Student implement Teachab,e Hireable, Offerable{}
+
+    Can a interface extend another interface?  Yes, one or more.
+    Example:
+    public interface Mammal extends Animal, Pet, OtherInterfaces{}
+
+    The purpose is to reuse the methods that exists in interface that are being extended
+
+    Abstract class:
+        it is declated using abstract keyword
+        public abstract class Student{
+        }
+        it cannot be instantiated --> NO OBJECT
+        it may contain abstract method
+
+        Fields -->
+        instance + static
+        final + non-final
+        private, proteected, default, public
+
+        Constructor -->
+        any constructor it can have like normal class
+
+        Methods -->
+        it can have abstarct method
+        it can have non-abstract method
+        instance + static
+
+        Blocks -->
+        instance + static block
+
+        How many class can a class extend?  ONLY 1.
+
+
+        Can a abstract class implement a interface?
+
+        public interface Pet{
+            public abstarct void feedPet();
+        }
+
+        Would this code compile?
+
+        public abstract class Cat implements Pet{
+            //public abstract voic feedPet();
+        }
+
+        public class SpartanCat extends Cat{
+            public void feedPet(){
+                //feed your cat with milk
+            }
+        }
+
